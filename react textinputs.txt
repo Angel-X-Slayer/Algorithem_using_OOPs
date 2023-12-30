@@ -1,0 +1,34 @@
+{/* <View style={styles.container}>
+      <Text> Name :</Text>
+      <TextInput
+        style={styles.input}
+        placeholder='ishan mukherjee'
+        placeholderTextColor={"grey"}
+        onChangeText={(val) => { setName(val); } } />
+
+      <Text> Age :</Text>
+      <TextInput
+        style={styles.input}
+        placeholder='44'
+        placeholderTextColor={"grey"}
+        onChangeText={(val) => { setAge(val); } } />
+
+      <Text> university :</Text>
+      <TextInput
+        style={styles.input}
+        placeholder='MAKAUT'
+        placeholderTextColor={"grey"}
+        onChangeText={(val) => { setUniversity(val); } } />
+
+      <Text> Marks :
+      <TextInput
+        style={styles.input}
+        placeholder='marks in GPA system'
+        placeholderTextColor={"grey"}
+        onChangeText={(val) => { setMarks(val); } } />
+      </Text>
+
+      <Text style={styles.textColor1}>
+        1.  <b>Name:</b> {name} ;  <b>Age:</b> {age} ;  <b>University:</b> {university} ;  <b>Marks:</b> {marks}
+      </Text>
+    </View> */}

@@ -5,7 +5,20 @@ class Node:
 class Linked_list:
     def __init__(self):
         self.head=None
-        
+
+    def delete_from_front(self):
+        if self.head==None:
+            print("No node is there to delete")
+        else:
+            self.head=self.head.ref
+    def delete_from_end(self):
+        if self.head==None:
+            print("No node to delete")
+        else:
+            n=self.head
+            while n.ref!=None:   
+                n=n.ref
+            n.ref=None
     def adding_in_front(self,data):
         new_node=Node(data)
         if self.head==None:
@@ -49,18 +62,32 @@ class Linked_list:
             self.head=new_node
         else:
             n=self.head
+            # while n.ref.ref!=None:
+            #     if n.ref.data==target:
+            #         new_node.ref=n.ref
+            #         n.ref=new_node
+            #         break
+            #     else:
+            #         n=n.ref
+            # if n.ref==None:
+            #     # print("no target found !!!")
+            #     return(-1)
+            # else:
+            #     return(self.head)
             while n.ref.ref!=None:
                 if n.ref.data==target:
                     new_node.ref=n.ref
                     n.ref=new_node
+                    ko=-1
                     break
                 else:
                     n=n.ref
-            if n.ref==None:
-                # print("no target found !!!")
-                return(-1)
+
+            if ko==-1:
+                return self.head
             else:
-                return(self.head)
+                return(None)
+                
             
 
     def traversal(self):
@@ -97,17 +124,36 @@ class Linked_list:
 # else:
 #     print("No target found!!!")  ## end of the input
 
-arr=list(map(int,input("enter array elements : ").split(' '))) ## Adding node after a specific node of the 
-target=int(input("enter the target node :"))                   ## linked list
-value=int(input("entre value to insert :"))
+# arr=list(map(int,input("enter array elements : ").split(' '))) ## Adding node before a specific node of the 
+# target=int(input("enter the target node :"))                   ## linked list
+# value=int(input("entre value to insert :"))
+# obj=Linked_list()
+# for i in arr:
+#     obj.adding_at_end(i)
+# k=obj.adding_before_specific_node(value,target)
+# if k!=None:
+#     obj.traversal()
+# else:
+#     print("No target found!!!")
+
+# arr=list(map(int,input("enter array elements : ").split(' ')))  ## Deleting a node from the front
+# obj=Linked_list()
+# for i in arr:
+#     obj.adding_at_end(i)
+# obj.delete_from_front()
+# obj.delete_from_front()
+# obj.traversal()
+# print("NULL")
+
+
+arr=list(map(int,input("enter array elements : ").split(' ')))  ## Deleting a node from the front
 obj=Linked_list()
 for i in arr:
     obj.adding_at_end(i)
-k=obj.adding_before_specific_node(value,target)
-if k!=-1:
-    obj.traversal()
-else:
-    print("No target found!!!")
+obj.delete_from_end()
+# obj.delete_from_front()
+obj.traversal()
+print("NULL")
 
 
     
