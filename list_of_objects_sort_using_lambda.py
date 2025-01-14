@@ -7,13 +7,7 @@ class Toy:
 
 class ToyStore:
     def findtoy(self, lst):
-        find_lst = []
-        for i in lst:
-            find_lst.append(i.quantity)
-        maxi = max(find_lst)
-        for i in lst:
-            if i.quantity == maxi:
-                return (i)
+        return (max(lst, key=lambda x: x.quantity))
 
     def sortingToy(self, lst):
         lst = sorted(lst, key=lambda x: x.quantity,
@@ -39,14 +33,14 @@ print(k.quantity)
 print()
 for i in r:
     print(i.id)
+# lst = list(map(int, input().split(" ")))
 
 
-lst = list(map(int, input().split(" ")))
-print(lst)
+# print(lst)
 
 
-k = 6
-if k not in lst:
-    print("true")
-else:
-    print("flase")
+# k = 6
+# if k not in lst:
+#     print("true")
+# else:
+#     print("flase")
